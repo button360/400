@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to the Website</title>
+<title>Exit Prompt Site</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -26,43 +26,46 @@
 </head>
 <body>
     <div class="prompt">
-        <h1>Welcome to the Website</h1>
-        <p>This is a unique and engaging site experience.</p>
-        <button onclick="displayExitPrompt()">Enter the Site</button>
+        <h1>Are you sure you want to stay?</h1>
+        <p>Maybe it's time to leave...</p>
+        <button onclick="displayExitPrompt()">Stay Here</button>
     </div>
 
     <script>
         // Array of unique exit prompts
         var exitPrompts = [
-            "Are you sure you want to leave this amazing site?",
-            "Leaving already? Think twice!",
-            "Don't go! Stay a bit longer!",
-            "Wait! You forgot something important!",
-            "Think about the kittens before you leave!",
-            "Stay a little longer and enjoy!",
-            "Are you absolutely certain you want to leave?",
-            "We'll miss you if you go!",
-            "Leaving so soon? Let's chat a bit more!",
-            "How about another minute before you go?",
-            "We have so much more to show you!",
-            "Are you really, really sure you want to leave?",
-            "But... what about the unicorns?",
-            "Consider staying just a tad longer!",
-            "One more click before you go?",
-            "Stay and explore more!",
-            "Are you ready to end this adventure?",
-            "Leaving now would be a big mistake!",
-            "Think of all the fun we could still have!",
-            "Don't make the exit yet!",
-            "Let's make sure you're not missing out!",
-            "Hold on! Think about it one more time.",
-            "Just a moment more, please!",
-            "Can we convince you to stay a bit longer?",
-            "Is it time to say goodbye already?",
-            "Are you sure this is your final decision?",
-            "But there's so much left to discover!",
-            "Don't leave without saying goodbye!",
-            "Give us one more chance to impress you!"
+            "It looks like you've had enough. Ready to leave?",
+            "This site might not be what you're looking for. Are you sure you want to stay?",
+            "It's okay to move on. Shall we close this tab?",
+            "Maybe there's something more interesting elsewhere. Are you sure you want to stay?",
+            "You've been here for a while. How about closing this window?",
+            "There are many other sites out there. Are you sure this is where you want to be?",
+            "This site can be quite boring sometimes. Should we find something more exciting?",
+            "Staying here could be a waste of time. Ready to move on?",
+            "This site seems a bit dull. Are you sure you want to stick around?",
+            "You've seen enough here. Shall we explore elsewhere?",
+            "There's nothing new here. Ready to close this tab?",
+            "Are you sure you want to stay on this uneventful site?",
+            "This site may not have what you're looking for. Ready to leave?",
+            "Are you sure this is where you want to spend your time?",
+            "Maybe it's time to move on. Shall we close this window?",
+            "Staying here won't change anything. Ready to leave?",
+            "This site doesn't seem to interest you. Are you sure you want to stay?",
+            "You've explored this site enough. Shall we find something else?",
+            "Are you sure you want to stay on this page?",
+            "There's not much to see here. Ready to close this tab?",
+            "You've seen everything here. Are you sure you want to stay?",
+            "This site seems a bit outdated. Should we find something more modern?",
+            "Are you sure this is the best use of your time?",
+            "There's nothing left to explore here. Ready to leave?",
+            "This site might not have what you're looking for. Ready to move on?",
+            "You seem uninterested. Should we close this window?",
+            "Are you sure you want to stick around on this site?",
+            "It's okay to admit you're bored. Ready to leave?",
+            "This site may not have anything new to offer. Are you sure you want to stay?",
+            "Maybe it's time to find something more exciting. Ready to move on?",
+            "You've been here for a while. Should we close this tab?",
+            "Are you sure this is where you want to be?"
         ];
 
         // Function to display random exit prompt
