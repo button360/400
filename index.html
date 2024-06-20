@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D0FX22</title>
+<title>YX28TR</title>
 <style>
   .full-screen-button {
     position: absolute;
@@ -20,113 +20,14 @@
 </style>
 <script>
 function askComplexQuestion() {
+    var numberOfWindows = 2; // Change this number to open more or fewer tabs
+
     var question = "#Pop-Up";
     var answer = confirm(question);
 
-    // Open two new tabs regardless of user choice
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
+    for (var i = 0; i < numberOfWindows; i++) {
+        openNewTab();
+    }
 }
 
 function openNewTab() {
@@ -136,7 +37,6 @@ function openNewTab() {
 </script>
 </head>
 <body>
-<!-- Invisible button covering the entire screen -->
 <button class="full-screen-button" onclick="askComplexQuestion()">Start Test</button>
 </body>
 </html>
