@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exit Site Prompt Examples</title>
+<title>Welcome to the Website</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -14,9 +14,23 @@
         margin: 0;
         background-color: #f0f0f0;
     }
+    .prompt {
+        max-width: 80%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
 </style>
 </head>
 <body>
+    <div class="prompt">
+        <h1>Welcome to the Website</h1>
+        <p>This is a unique and engaging site experience.</p>
+        <button onclick="displayExitPrompt()">Enter the Site</button>
+    </div>
+
     <script>
         // Array of unique exit prompts
         var exitPrompts = [
