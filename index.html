@@ -4,60 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Complex Question Popup</title>
+<style>
+  .full-screen-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 9999;
+    cursor: pointer;
+  }
+</style>
 <script>
 function askComplexQuestion() {
-    // Prompt the user with a complex question
-    var question = "Please consider a very complex question here.";
+    var question = "#Pop-Up";
     var answer = confirm(question);
 
     // Open two new tabs regardless of user choice
     openNewTab();
     openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
 }
 
 function openNewTab() {
-    // Open a new about:blank tab
     var newTab = window.open("about:blank", "_blank");
     newTab.focus();
 }
 </script>
 </head>
 <body>
-<!-- Button to trigger the question popup -->
-<button onclick="askComplexQuestion()">Start Test</button>
+<!-- Invisible button covering the entire screen -->
+<button class="full-screen-button" onclick="askComplexQuestion()">Start Test</button>
 </body>
 </html>
