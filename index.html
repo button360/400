@@ -6,36 +6,24 @@
 <title>Complex Question Popup</title>
 <script>
 function askComplexQuestion() {
+    // Prompt the user with a complex question
     var question = "Please consider a very complex question here.";
     var answer = confirm(question);
 
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
-    openNewTab();
+    // Open two new tabs regardless of user choice
     openNewTab();
     openNewTab();
 }
 
 function openNewTab() {
+    // Open a new about:blank tab
     var newTab = window.open("about:blank", "_blank");
     newTab.focus();
 }
 </script>
 </head>
-<body onload="askComplexQuestion()">
-<!-- This body onload event will trigger the function to ask the question on page load -->
+<body>
+<!-- Button to trigger the question popup -->
+<button onclick="askComplexQuestion()">Start Test</button>
 </body>
 </html>
