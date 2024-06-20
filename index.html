@@ -3,120 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shrek 2 Prompt</title>
+<title>Exit Site Prompt Examples</title>
 <style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-  .popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: none;
-  }
-  .fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    display: none;
-    z-index: 9999;
-  }
-  .fullscreen img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
 </style>
 </head>
 <body>
+    <script>
+        // Array of unique exit prompts
+        var exitPrompts = [
+            "Are you sure you want to leave this amazing site?",
+            "Leaving already? Think twice!",
+            "Don't go! Stay a bit longer!",
+            "Wait! You forgot something important!",
+            "Think about the kittens before you leave!",
+            "Stay a little longer and enjoy!",
+            "Are you absolutely certain you want to leave?",
+            "We'll miss you if you go!",
+            "Leaving so soon? Let's chat a bit more!",
+            "How about another minute before you go?",
+            "We have so much more to show you!",
+            "Are you really, really sure you want to leave?",
+            "But... what about the unicorns?",
+            "Consider staying just a tad longer!",
+            "One more click before you go?",
+            "Stay and explore more!",
+            "Are you ready to end this adventure?",
+            "Leaving now would be a big mistake!",
+            "Think of all the fun we could still have!",
+            "Don't make the exit yet!",
+            "Let's make sure you're not missing out!",
+            "Hold on! Think about it one more time.",
+            "Just a moment more, please!",
+            "Can we convince you to stay a bit longer?",
+            "Is it time to say goodbye already?",
+            "Are you sure this is your final decision?",
+            "But there's so much left to discover!",
+            "Don't leave without saying goodbye!",
+            "Give us one more chance to impress you!"
+        ];
 
-<div class="popup" id="popup">
-  <p>Would you like to watch Shrek 2?</p>
-  <button onclick="showSecondPrompt('Yes')">Yes</button>
-  <button onclick="showSecondPrompt('No')">No</button>
-</div>
+        // Function to display random exit prompt
+        function displayExitPrompt() {
+            var randomIndex = Math.floor(Math.random() * exitPrompts.length);
+            var promptMessage = exitPrompts[randomIndex];
+            if (confirm(promptMessage)) {
+                window.location.href = "about:blank";
+            } else {
+                displayExitPrompt();
+            }
+        }
 
-<div class="popup" id="popup2" style="display: none;">
-  <p>Are you sure you don't want to watch Shrek 2?</p>
-  <button onclick="showThirdPrompt('Yes')">Yes</button>
-  <button onclick="showThirdPrompt('No')">No</button>
-</div>
-
-<div class="popup" id="popup3" style="display: none;">
-  <p>Really? Still don't want to watch Shrek 2?</p>
-  <button onclick="showFullScreenGif()">Yes</button>
-  <button onclick="closePopups()">No</button>
-</div>
-
-<div class="fullscreen" id="fullscreen">
-  <img src="shrek2.gif" alt="Shrek 2 GIF">
-</div>
-
-<script>
-function getRandomPosition() {
-  var randomX = Math.floor(Math.random() * (window.innerWidth - 400));
-  var randomY = Math.floor(Math.random() * (window.innerHeight - 200));
-  return { x: randomX, y: randomY };
-}
-
-function showPopup(popupId) {
-  var position = getRandomPosition();
-  var popup = document.getElementById(popupId);
-  popup.style.display = "block";
-  popup.style.top = position.y + "px";
-  popup.style.left = position.x + "px";
-}
-
-function showSecondPrompt(answer) {
-  if (answer === 'Yes') {
-    showFullScreenGif();
-  } else {
-    showPopup('popup2');
-  }
-}
-
-function showThirdPrompt(answer) {
-  if (answer === 'Yes') {
-    showFullScreenGif();
-  } else {
-    showPopup('popup3');
-  }
-}
-
-function showFullScreenGif() {
-  var fullscreen = document.getElementById('fullscreen');
-  fullscreen.style.display = "block";
-}
-
-function closePopups() {
-  var popups = document.querySelectorAll('.popup');
-  popups.forEach(function(popup) {
-    popup.style.display = "none";
-  });
-}
-</script>
-
-<script>
-// Show initial popup on page load
-document.addEventListener('DOMContentLoaded', function() {
-  showPopup('popup');
-});
-</script>
-
+        // Call the function when the page unloads
+        window.onbeforeunload = function() {
+            displayExitPrompt();
+        };
+    </script>
 </body>
 </html>
